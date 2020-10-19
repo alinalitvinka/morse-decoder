@@ -41,8 +41,8 @@ function decode(expr) {
     let result = [];
     let code = '';
   for (i = 0; i < expr.length; i = i + 10) {
-  if (expr.slice(i) === '*') {
-    result.push(" ");
+  if (expr.slice(i, i+2) === '**') {
+    result.push(' ');
   } else for (j = 0; j < 9; j = j + 2) {
     if (expr.slice(i, i+10).slice(j, j+2) === '10') {
       code += '.';
